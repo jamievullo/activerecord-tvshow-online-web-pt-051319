@@ -9,6 +9,7 @@ class Show < ActiveRecord::Base
   end
   
   def self.most_popular_show
+    #binding.pry
     self.order(rating: :desc).first#.name
     #self.where(":rating = ?", highest_rating[:name]) #????
   end
@@ -26,6 +27,7 @@ class Show < ActiveRecord::Base
   end
   
   def self.popular_shows
+    #binding.pry
     self.where("rating > 5")
   end
   

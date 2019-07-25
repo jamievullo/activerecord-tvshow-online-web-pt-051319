@@ -9,8 +9,8 @@ class Show < ActiveRecord::Base
   end
   
   def self.most_popular_show
-    #self.order(rating: :desc).first
-    self.where(":rating = ?", highest_rating[:name])
+    self.order(rating: :desc).first.name
+    #self.where(":rating = ?", highest_rating[:name])
   end
   
   def self.lowest_rating
